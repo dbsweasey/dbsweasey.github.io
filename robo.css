@@ -1,0 +1,130 @@
+body {
+  background-color: black;
+}
+
+a {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+}
+
+h1,
+a {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(51, 255, 0);
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+span,
+p {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(51, 255, 0);
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.c1 {
+  display: inline-block;
+}
+
+.type {
+  overflow: hidden;
+  white-space: nowrap;
+  animation:
+    type_anim 1s steps(32, end);
+}
+
+.appear1 {
+  animation: appear_anim steps(20, end) 2.4s;
+}
+
+.appear2 {
+  animation: appear_anim steps(20, end) 2.8s;
+}
+
+.appear3 {
+  animation: appear_anim steps(20, end) 3.2s;
+}
+
+.appear4 {
+  animation: appear_anim steps(20, end) 3.6s;
+}
+
+.flash:after {
+  font-family: 'Courier New', Courier, monospace;
+  color: rgb(51, 255, 0);
+  font-size: 20px;
+  content: '';
+  animation: flash_anim steps(1, end) 1.1s infinite;
+  animation-delay: 3.5s
+}
+
+.loading:after {
+  overflow: hidden;
+  vertical-align: bottom;
+  animation:
+    ellipsis steps(1, end) 700ms 2;
+  content: '';
+  animation-delay: 1s
+}
+
+@keyframes ellipsis {
+  0% {
+    content: '';
+  }
+
+  25% {
+    content: '.';
+  }
+
+  50% {
+    content: '..';
+  }
+
+  75% {
+    content: '...';
+  }
+
+  100% {
+    content: '';
+  }
+}
+
+@keyframes type_anim {
+  from {
+    width: 0%
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+@keyframes appear_anim {
+  0% {
+    opacity: 0
+  }
+
+  97% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@keyframes flash_anim {
+  0% {
+    content: '';
+  }
+
+  40% {
+    content: '>';
+  }
+
+  100% {
+    content: '';
+  }
+}
