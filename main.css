@@ -35,6 +35,7 @@ ul {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 1;
 }
 
 li {
@@ -65,6 +66,7 @@ img {
   height: 300px;
   border-radius: 150px;
   float: left;
+  position: relative;
 }
 
 .link {
@@ -114,6 +116,41 @@ img {
 
 p {
   font-size: 20px;
+  margin: 0 0 0 0;
+}
+
+#bio {
   margin-left: 40px;
   margin-right: 40px;
+}
+
+#description {
+  text-align: center;
+  margin: 0 100px 0 100px
+}
+
+.project-link {
+  text-align: center;
+  display: block;
+  font-size: 20px;
+  background: #2c4247;
+  height: 45px;
+  width: 100px;
+  text-decoration: none;
+  color: white;
+  padding-top: 20px
+}
+
+
+table {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  border-spacing: 100px
+}
+
+.leftside {
+  text-align: right;
+  vertical-align: center;
+  float: right
 }
