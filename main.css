@@ -160,3 +160,20 @@ table {
   margin-right: 20px;
   margin-left: 43%
 }
+
+.project-pic {
+  transition-property: all;
+  -webkit-transition-property: all;
+  transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+}
+
+.project-pic:hover {
+  display: block;
+  cursor: pointer;
+  transform: scale(2.5);
+  z-index: 10;
+  border-radius: 100px
+}
