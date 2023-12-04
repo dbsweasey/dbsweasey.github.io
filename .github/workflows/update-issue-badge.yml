@@ -46,5 +46,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: Update Issue Badge
-          files: |
-            issue_badge.svg
+          files:
+            ./github/badges/issue_badge.svg
