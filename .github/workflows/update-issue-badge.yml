@@ -9,6 +9,9 @@ jobs:
   update-badge:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Fetch Issue Count
         id: get-issue-count
         run: |
@@ -22,22 +25,9 @@ jobs:
           issue_count=${{ steps.get-issue-count.outputs.issue_count }}
 
           svg_code="<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"150\" height=\"20\">
-            <linearGradient id=\"b\" x2=\"0\" y2=\"100%\">
-              <stop offset=\"0\" stop-color=\"#4c1\" stop-opacity=\".1\"/>
-              <stop offset=\"1\" stop-opacity=\".1\"/>
-            </linearGradient>
-            <mask id=\"a\">
-              <rect width=\"150\" height=\"20\" rx=\"3\" fill=\"#fff\"/>
-            </mask>
-            <g mask=\"url(#a)\">
-              <path fill=\"#555\" d=\"M0 0h85v20H0z\"/>
-              <path fill=\"#4c1\" d=\"M85 0h65v20H85z\"/>
-              <path fill=\"url(#b)\" d=\"M0 0h150v20H0z\"/>
-            </g>
-            <g fill=\"#fff\" text-anchor=\"middle\" font-family=\"Verdana,Geneva,DejaVu Sans,sans-serif\" font-size=\"11\">
-              <text x=\"42.5\" y=\"14\" fill=\"#010101\" fill-opacity=\".3\">Open Issues: $issue_count</text>
-              <text x=\"42.5\" y=\"13\">Open Issues: $issue_count</text>
-            </g>
+            <!-- Your SVG code here -->
+            <text x=\"37.5\" y=\"14\" fill=\"#010101\" fill-opacity=\".3\">Open Issues: $issue_count</text>
+            <text x=\"37.5\" y=\"13\">Open Issues: $issue_count</text>
           </svg>"
 
           echo "$svg_code" > issue_badge.svg
