@@ -43,8 +43,9 @@ jobs:
           echo "$svg_code" > issue_badge.svg
 
       - name: Commit Badge Changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: Update Issue Badge
-          files:
-            ./github/badges/issue_badge.svg
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add issue_badge.svg
+          git commit -m "Update Issue Badge"
+          git push origin HEAD:main
