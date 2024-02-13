@@ -9,6 +9,10 @@ body {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+a {
+  color: white
+}
+
 h1 {
   text-align: center;
   margin-top: 80px;
@@ -138,7 +142,7 @@ p {
   width: 100px;
   text-decoration: none;
   color: white;
-  padding-top: 20px
+  padding-top: 20px;
 }
 
 
