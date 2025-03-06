@@ -185,3 +185,11 @@ table {
   z-index: 10;
   border-radius: 100px
 }
+
+.wide:hover {
+  display: block;
+  cursor: pointer;
+  transform: scaleY(1.7) scaleX(2.8);
+  z-index: 10;
+  border-radius: 100px
+}
