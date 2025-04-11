@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="../stylesheets/main.css">
+    <link rel="stylesheet" href="./stylesheets/main.css">
 </head>
 
 <body>
@@ -20,10 +20,23 @@
     <h1>Contact</h1>
     <h2>David Sweasey</h2>
     <br />
+
+    <form action="https://formspree.io/f/xgvadewk" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required></input>
+        <input type="text" name="email" placeholder="Your Email" required></input>
+        <textarea name="message" placeholder="Your Message" rows="6"></textarea>
+        <input type="text" name="_gotcha" style="display:none"></div>
+        <div style="text-align: center;">
+            <button type="submit" class="submit-button">Send Message</button>
+        </div>
+    </form>
+
+
+    <br>
     <table>
         <tr>
             <a href="https://www.linkedin.com/in/david-sweasey"><img class="logo"
-                    src="../images/logos/linkedin.jpg"></img></a>
+                    src="./images/logos/linkedin.jpg"></img></a>
             <p style="margin-top: 20px;">LinkedIn</p>
         </tr>
     </table>
@@ -31,13 +44,13 @@
         <br />
         <tr>
             <a href="https://www.facebook.com/david.sweasey/"><img class="logo"
-                    src="../images/logos/facebook.png"></img></a>
+                    src="./images/logos/facebook.png"></img></a>
             <p style="margin-top: 20px;">Facebook</p>
         </tr>
         <br />
-        <tr>
-            <a href="mailto:davidbsweasey@gmail.com"><img class="logo" src="../images/logos/gmail.png"></img></a>
-            <p style="margin-top: 20px;">Email</p>
-        </tr>
+        <!-- <tr>
+            <a href="mailto:davidbsweasey@gmail.com"><img class="logo" src="./images/logos/gmail.png"></img></a>
+            <p style="margin-top: 20px;">Email (davidbsweasey@gmail.com)</p>
+        </tr> -->
     </table>
 </body>
